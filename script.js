@@ -81,6 +81,30 @@ while (restartGame){
     // break;
     }
 
+    // Prompts user with option to play again
+    playAgain = prompt(`Would you like to play again? Y for yes. N for no.`);
 
-    break; 
+    // Loop continues until user submits a vaild response
+  while (true){
+    // Checks if the user's answer is no (AKA `N`)
+    if (playAgain === `N`) {
+        // Alerts the user that the game is over and the game does NOT restart
+        alert(`Thanks for playing!`);
+        restartGame = false;
+        break;
+      
+    //  Checks if the user's answer is yes (AKA `Y`)
+    } else if (playAgain === `Y`) {
+    // The game restarts
+      break;
+
+    // Prompts the user to enter a valid response and start the loop again
+    } else {
+      playAgain = prompt(`Please enter Y or N.`);
+    }
+
+    // break;
+  }
+
+    // break;
 }
